@@ -19,10 +19,10 @@ before_install:
 
 
 before_deploy:
-  - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PWD"
+  - sudo docker login -u "$REGISTRY_USER" -p "$REGISTRY_PWD"
 
 deploy:
   provider: script
-  script: docker push cxy1221/sshlogin_tomcat
+  script: sudo docker push cxy1221/sshlogin_tomcat
   on:
 branch: master
