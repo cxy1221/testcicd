@@ -12,8 +12,6 @@ env:
     - REGISTRY_USER=cxy1221
     - REGISTRY_PWD=ccxxyy217991
 before_install:
-  - echo "USE mysql;\nUPDATE user SET password=PASSWORD('root') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
-  - mysql -u root --password="root" 
   - sudo service mysql restart
   - sudo docker pull cxy1221/sshlogin_tomcat
   - sudo docker run -d --network="host" cxy1221/sshlogin_tomcat
