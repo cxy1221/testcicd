@@ -2,9 +2,6 @@ sudo: required
 
 language: java
 
-jdk:
-  - openjdk11
-
 services:
   - mysql
   - docker
