@@ -18,7 +18,7 @@ before_install:
   - sudo docker ps
 
 install: 
-- mvn install -DskipTests=true -Dmaven.javadoc.skip=true
+- mvn install -Dmaven.test.skip=true
 
 before_deploy:
   - sudo docker login -u "$REGISTRY_USER" -p "$REGISTRY_PWD"
@@ -26,5 +26,4 @@ before_deploy:
 deploy:
   provider: script
   script: sudo docker push cxy1221/sshlogin_tomcat
-  on:
-branch: master
+
