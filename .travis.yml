@@ -1,5 +1,6 @@
 sudo: required
-laguage:java
+
+language: java
 
 services:
   - mysql
